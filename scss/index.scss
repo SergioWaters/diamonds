@@ -1,0 +1,18 @@
+@import './normalize';
+@import './fonts';
+@import './vars';
+@import './ui-kit';
+
+body {
+  background-color: #484848;
+}
+
+.wrapper {
+  background-color: #fff;
+  color: $primarycolor;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}

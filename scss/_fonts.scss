@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 300;
+  src: local('Inter Light'),
+    url(../fonts/inter/inter-variable.ttf) format('truetype'),
+    url(../fonts/inter/static/inter-light-300.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: local('Inter Regular'),
+    url(../fonts/inter/inter-variable.ttf) format('truetype'),
+    url(../fonts/inter/static/inter-regular-400.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: local('Inter Medium'),
+    url(../fonts/inter/inter-variable.ttf) format('truetype'),
+    url(../fonts/inter/static/inter-medium-500.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: local('Inter SemiBold'),
+    url(../fonts/inter/inter-variable.ttf) format('truetype'),
+    url(../fonts/inter/static/inter-semibold-600.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Prata';
+  font-weight: 400;
+  src: local('Prata'),
+    url(../fonts/inter/inter-variable.ttf) format('truetype'),
+    url(../fonts/inter/static/inter-light-300.ttf) format('truetype');
+}

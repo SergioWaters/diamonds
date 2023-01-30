@@ -2,6 +2,15 @@
 @import './fonts';
 @import './vars';
 @import './ui-kit';
+@import './sku';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #484848;
@@ -10,6 +19,9 @@ body {
 .wrapper {
   background-color: #fff;
   color: $primarycolor;
+  font-size: 14px;
+  font-family: 'Inter';
+  font-weight: 400;
 }
 
 .container {

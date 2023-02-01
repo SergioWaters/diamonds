@@ -1,0 +1,93 @@
+.main section.main_sale_ads {
+
+  margin: 40px 0 0 0;
+}
+
+.main_sale_ads {
+  &__inner {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__item {
+    width: 420px;
+    height: 290px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 0 16px 32px #0000001A;
+      transition: 0.5s;
+    }
+
+    & h3 {
+      @include font-inter-600;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 32px;
+      margin: 72px 0 29px 26px;
+      max-width: 200px;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 32px;
+      color: #fff;
+
+      & span {
+        font-size: 36px;
+        line-height: 50px;
+        margin: 0 0 0 13px;
+      }
+    }
+
+    &.diamonds {
+      background-image: url('../images/sale/diamonds.png'),
+        url('../images/main_slider/diamond_bg.svg');
+      background-repeat: no-repeat;
+      background-size: auto, 450px auto;
+      background-position: right center, -107px 20px;
+
+      & div {
+        background-color: #43807f;
+
+      }
+    }
+
+    &.rings {
+      background-image: url('../images/sale/rings_brac.png'),
+        url('../images/main_slider/diamond_bg.svg');
+      background-repeat: no-repeat;
+      background-size: auto, 450px auto;
+      background-position: right center, -107px 20px;
+
+      & div {
+        background-color: #e24b33;
+
+      }
+    }
+
+    &.wedding {
+      background-image: url('../images/sale/wedding.png'),
+        url('../images/main_slider/diamond_bg.svg');
+      background-repeat: no-repeat;
+      background-size: auto, 450px auto;
+      background-position: right 50px, -107px 20px;
+
+      & div {
+        background-color: #e1a661;
+
+      }
+    }
+  }
+}

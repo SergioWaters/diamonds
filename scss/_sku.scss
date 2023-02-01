@@ -1,13 +1,14 @@
 .card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   padding: 20px;
   color: #303030;
   background-color: #fff;
   border: 1px solid #f0f0f0;
   width: 310px;
   position: relative;
-
+  transition: 0.5s;
 
   &_icons {
     position: absolute;
@@ -15,6 +16,7 @@
     right: 20px;
     display: flex;
     flex-direction: column;
+    z-index: 98;
 
     & .card_icon {
       margin: 5px;
@@ -24,15 +26,70 @@
   &_promos {
     display: flex;
     color: #fff;
+    min-height: 25px;
 
     & .promo:nth-child(1) {
       background-color: #5b8a8f;
     }
   }
 
-
   &_slider {
-    margin: 10px 20px;
+    min-width: 0;
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+    &_wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin: 0 0 26px 0;
+    }
+
+    &__pagination {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      display: flex;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+
+      & .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      & .slick-dots li {
+        font-size: 0;
+        list-style: none;
+        margin: 0px 4px;
+      }
+
+      & .slick-dots li button {
+        border: 1px solid #303030;
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      & .slick-dots li.slick-active button {
+        background-color: #303030;
+        border: none;
+      }
+    }
+
+    & .slick-list {
+      overflow: hidden;
+    }
+
+    & .slick-track {
+      display: flex;
+    }
+
   }
 
   &_price {
@@ -42,6 +99,7 @@
     display: flex;
     align-items: end;
     position: relative;
+    min-height: 22px;
 
     &-old {
       color: #8f8f8f;
@@ -72,14 +130,21 @@
 
   &_description {
     margin: 16px 0 20px 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: Inter;
   }
 
-
+  &:hover .dropdown {
+    display: flex;
+  }
 
   & .dropdown {
     width: 100%;
     background-color: #f0f0f0;
     margin: 4px 0;
+    display: none;
 
     &-selected {
       position: relative;
@@ -97,14 +162,17 @@
       }
     }
 
-    &-checkbox {}
+    &-checkbox {
+      display: none;
+    }
 
-    &-list {}
+    // &-list {}
 
-    &-list-item {}
+    // &-list-item {}
   }
 
   &:hover {
     box-shadow: 0 16px 32px #0000001A;
+    transition: 0.5s;
   }
 }

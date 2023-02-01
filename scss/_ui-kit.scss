@@ -44,7 +44,10 @@
   }
 }
 
-.button-circle {
+// 
+
+.button-circle-right,
+.button-circle-left {
   box-sizing: border-box;
   border-radius: 50%;
   display: flex;
@@ -54,87 +57,85 @@
   height: 54px;
   width: 54px;
   padding: 20px;
-  background-color: #ffffff;
-  color: #303030;
   border: 1px solid #303030;
-
-  &__arrow-left {
-    background-color: #000000;
-    display: block;
-    height: 1px;
-    width: 16px;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      transform: rotate(-45deg);
-      left: 0;
-      transform-origin: left;
-      width: 30%;
-      height: inherit;
-      background-color: inherit;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      transform: rotate(45deg);
-      left: 0;
-      transform-origin: left;
-      width: 30%;
-      height: inherit;
-      background-color: inherit;
-    }
-  }
-
-  &__arrow-right {
-    background-color: #000000;
-    display: block;
-    height: 1px;
-    width: 16px;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      transform: rotate(-45deg);
-      right: 0;
-      transform-origin: right;
-      width: 30%;
-      height: inherit;
-      background-color: inherit;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      transform: rotate(45deg);
-      right: 0;
-      transform-origin: right;
-      width: 30%;
-      height: inherit;
-      background-color: inherit;
-    }
-  }
+  z-index: 999;
+  background-color: transparent;
 
   &:hover {
     background-color: #f5f5f5;
   }
 
-  &:active {
-    background-color: #f5f5f5;
+  &__arrow {
+    background-color: #000000;
+    display: block;
+    height: 1px;
+    width: 16px;
+    position: relative;
+  }
+}
+
+.button-circle-right {
+  &__arrow {
+    &::after {
+      content: '';
+      position: absolute;
+      transform: rotate(-45deg);
+      right: 0;
+      transform-origin: right;
+      width: 30%;
+      height: inherit;
+      background-color: inherit;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform: rotate(45deg);
+      right: 0;
+      transform-origin: right;
+      width: 30%;
+      height: inherit;
+      background-color: inherit;
+    }
   }
 
-  &:active &__arrow-left {
-    right: 100%;
-  }
-
-  &:active &__arrow-right {
+  &:active &__arrow {
     left: 100%;
   }
 
 }
+
+.button-circle-left {
+  &__arrow {
+    &::after {
+      content: '';
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 0;
+      transform-origin: left;
+      width: 30%;
+      height: inherit;
+      background-color: inherit;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform: rotate(45deg);
+      left: 0;
+      transform-origin: left;
+      width: 30%;
+      height: inherit;
+      background-color: inherit;
+    }
+  }
+
+  &:active &__arrow {
+    right: 100%;
+  }
+}
+
+// 
 
 .button-rounded {
   display: block;
@@ -176,7 +177,7 @@
   }
 }
 
-.nav_menu-item {
+.nav_menu-link {
   display: block;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -194,6 +195,7 @@
   stroke: transparent;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 
   &-checked {
     fill: #E24B33;
@@ -248,7 +250,6 @@
   }
 
   &_text {
-    left: -134px;
     margin: auto;
     color: #303030;
     bottom: 30px;
@@ -268,7 +269,7 @@
     height: 10px;
     transform: rotate(45deg);
     background-color: #fff;
-    left: 138px;
+    left: 120px;
     bottom: -5px;
   }
 
@@ -281,6 +282,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
 
   &-checkbox {
     display: none;
@@ -299,7 +301,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 99;
+    z-index: 999;
     width: 100%;
 
     &-item {
@@ -308,6 +310,17 @@
       list-style-type: none;
       height: 32px;
       background-color: #fff;
+      display: inline-block;
+
+      & i {
+        display: inline-block;
+        width: 6px;
+        height: 10px;
+        transform: rotate(45deg);
+        margin: 0 0 1px 12px;
+        border-right: 1px solid #303030;
+        border-bottom: 1px solid #303030;
+      }
     }
 
     &-item:hover {
@@ -316,7 +329,7 @@
   }
 
   &-checkbox:checked~&-list {
-    display: inline-block;
-
+    display: flex;
+    flex-direction: column;
   }
 }

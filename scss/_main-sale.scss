@@ -1,0 +1,65 @@
+.main_sale {
+
+  & h1 {
+    @include font-prata-400;
+    margin: 0;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px 0 26px 0;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: start;
+
+    & .button-rounded {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0px -10px;
+    min-width: 0;
+    min-height: 540px;
+
+    &_buttons {
+      display: flex;
+      justify-content: end;
+
+      & .button-circle-left {
+        margin-right: 8px;
+      }
+
+      .slick-arrow.slick-disabled {
+        opacity: 0.2;
+      }
+    }
+
+    & .card {
+      margin: 10px 10px 30px 10px;
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-track {
+      display: flex;
+    }
+
+  }
+}

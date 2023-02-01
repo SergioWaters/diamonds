@@ -3,6 +3,13 @@
 @import './vars';
 @import './ui-kit';
 @import './sku';
+@import './header';
+@import './main-promo';
+@import './main-popular';
+@import './main-sale';
+@import './main-sale-ads';
+@import './main-daily';
+@import './main_articles';
 
 *,
 *::after,
@@ -20,11 +27,15 @@ body {
   background-color: #fff;
   color: $primarycolor;
   font-size: 14px;
-  font-family: 'Inter';
-  font-weight: 400;
+  @include font-inter-400;
+  max-width: 1920px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1300px;
+}
+
+.main section {
+  margin: 120px 0 0 0;
 }

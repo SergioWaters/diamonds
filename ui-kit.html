@@ -25,15 +25,14 @@
   <label class="info" for="info">
     ?
     <input type="checkbox" name="info" id="info" class="info_checkbox">
-    <p class="info_text">
+    <span class="info_text">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, molestiae?
-    </p>
+    </span>
   </label>
 
-  <label class="dropdown" for="drop">
+  <div class="dropdown">
     <span class="dropdown-selected"> Санкт-Петербург</span>
-    <input type="checkbox" name="info" id="drop" class="dropdown-checkbox">
-    <ul class="dropdown-list">
+    <ul class="dropdown-list hidden">
       <li class="dropdown-list-item">
         Санкт-Петербург</li>
       <li class="dropdown-list-item">
@@ -43,7 +42,7 @@
       <li class="dropdown-list-item">
         Ростов-на-Дону</li>
     </ul>
-  </label>
+  </div>
 
   <div class="card">
     <div class="card_icons">
@@ -75,36 +74,34 @@
       </div>
       <div class="ui-kit card_slider__pagination"></div>
     </div>
-    <div class="card_price">41 000 &#8381
-      <span class="card_price-old">65 000 &#8381</span>
+    <div class="card_price">41 000 &#8381;
+      <span class="card_price-old">65 000 &#8381;</span>
       <span class="promo">-45%</span>
     </div>
     <p class="card_description">Стильное кольцо из белого золота c бриллиантами
     </p>
-    <label class="dropdown" for="material">
+    <div class="dropdown">
       <span class="dropdown-selected">Белое золото</span>
-      <input type="checkbox" name="info" id="material" class="dropdown-checkbox">
       <ul class="dropdown-list">
         <li class="dropdown-list-item">Белое золото</li>
         <li class="dropdown-list-item">Желтое золото</li>
         <li class="dropdown-list-item">Серебро</li>
       </ul>
-    </label>
-    <label class="dropdown" for="size">
+    </div>
+    <div class="dropdown">
       <span class="dropdown-selected">Размер: 16</span>
-      <input type="checkbox" name="info" id="size" class="dropdown-checkbox">
       <ul class="dropdown-list">
         <li class="dropdown-list-item">Размер: 14</li>
         <li class="dropdown-list-item">Размер: 16</li>
         <li class="dropdown-list-item">Размер: 18</li>
         <li class="dropdown-list-item">Размер: 20</li>
       </ul>
-    </label>
+    </div>
   </div>
-  <script type="text/javascript" src="/js/index.js"></script>
-  <script type="text/javascript" src="/js/jquery.js"></script>
-  <script type="text/javascript" src="/js/slick.min.js"></script>
-  <script type="text/javascript" src="/js/slick_settings.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/slick.min.js"></script>
+  <script src="/js/slick_settings.js"></script>
 </body>
 
 </html>

@@ -86,4 +86,40 @@ $(document).ready(function () {
     pauseOnHover: false,
     slidesToShow: 4,
   });
+  // 
+  $('.main_daily__slider').slick({
+    dots: false,
+    arrows: true,
+    prevArrow: $('.main_daily .button-circle-left'),
+    nextArrow: $('.main_daily .button-circle-right'),
+    autoplay: false,
+    autoplayspeed: 5000,
+    infinite: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToShow: 1,
+  });
+
+  $('.first.main_daily__item-slider').slick({
+    dots: false,
+    arrows: true,
+    prevArrow: $('.first.main_daily__item-slider_wrapper .arrow__left'),
+    nextArrow: $('.first.main_daily__item-slider_wrapper .arrow__right'),
+    autoplay: false,
+    autoplayspeed: 5000,
+    infinite: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+  $('.second.main_daily__item-slider').slick({
+    dots: false,
+    arrows: true,
+    prevArrow: $('.second.main_daily__item-slider_wrapper .arrow__left'),
+    nextArrow: $('.second.main_daily__item-slider_wrapper .arrow__right'),
+    autoplay: false,
+    autoplayspeed: 5000,
+    infinite: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
 });

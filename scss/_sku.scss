@@ -28,8 +28,18 @@
     color: #fff;
     min-height: 25px;
 
-    & .promo:nth-child(1) {
-      background-color: #5b8a8f;
+    & .promo {
+      &.black {
+        background-color: #495159;
+      }
+
+      &.yellow {
+        background-color: #e1a661;
+      }
+
+      &.green {
+        background-color: #5b8a8f;
+      }
     }
   }
 

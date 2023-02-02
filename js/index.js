@@ -17,7 +17,9 @@ function dropdownClickHandler(e) {
   const t = e.target;
   if (t.className === 'dropdown-selected') {
     const icon = document.createElement('i');
-    t.parentNode.querySelectorAll('li')
+    const parent = t.parentNode;
+    parent.querySelector('ul').classList.toggle('hidden');
+    parent.querySelectorAll('li')
       .forEach(i => {
         i.querySelector('i')?.remove();
         if (i.textContent === t.textContent) {
@@ -26,7 +28,7 @@ function dropdownClickHandler(e) {
       })
   };
   if (t.className === 'dropdown-list-item') {
-    const text = t.textContent;
-    const items = t.parentNode.parentNode.childNodes; items[1].textContent = text;
+    t.parentNode.classList.add('hidden')
+    t.parentNode.parentNode.querySelector('.dropdown-selected').textContent = t.textContent;
   }
 }

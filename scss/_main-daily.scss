@@ -14,8 +14,30 @@
     margin: 0 0 40px 0;
   }
 
+  //global slider
   &__slider {
+    min-width: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     &_buttons {
+      display: flex;
+
+      & .slick-arrow.slick-disabled {
+        opacity: 0.3;
+      }
+
+      & .button-circle-left {
+        margin-right: 10px;
+      }
+    }
+
+    & .slick-list {
+      overflow: hidden;
+    }
+
+    & .slick-track {
       display: flex;
     }
   }
@@ -23,9 +45,75 @@
   &__item {
     display: flex;
     justify-content: start;
+    position: relative;
+
+    & .card_promos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 998;
+    }
+
+
+    //local slider
+    &-slider {
+      min-width: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 550px;
+
+      & .slick-list {
+        overflow: hidden;
+      }
+
+      & .slick-track {
+        display: flex;
+      }
+
+      &_wrapper {
+        margin: 0 100px 0 0;
+        min-width: 0;
+        position: relative;
+
+        & .arrow__left,
+        & .arrow__right {
+          position: absolute;
+          display: block;
+          width: 10px;
+          height: 10px;
+          top: 50%;
+          z-index: 998;
+          transform: rotate(45deg);
+          border: 2px solid #303030;
+        }
+
+        & .arrow__right {
+          right: 2px;
+          border-left: none;
+          border-bottom: none;
+        }
+
+        & .arrow__left {
+          left: 2px;
+          border-right: none;
+          border-top: none;
+        }
+
+        & .slick-arrow.slick-disabled {
+          opacity: 0.3;
+        }
+
+        & .button-circle-left {
+          margin-right: 10px;
+        }
+
+      }
+
+    }
   }
 
-  & .item__info {
+  &__item_info {
 
     & .raiting {
       display: flex;

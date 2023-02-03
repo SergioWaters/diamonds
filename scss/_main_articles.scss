@@ -46,6 +46,7 @@
     text-align: left;
     color: #303030;
     margin: 10px;
+    max-width: 310px;
 
     & .item__img {
       transition: 0.5s;
@@ -67,5 +68,15 @@
       font-size: 16px;
     }
 
+  }
+}
+
+@media (max-width: 1299px) {
+  .main_articles {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
   }
 }

@@ -1,5 +1,6 @@
 @import './normalize';
 @import './fonts';
+@import './burger';
 @import './vars';
 @import './ui-kit';
 @import './sku';
@@ -29,6 +30,8 @@ body {
   font-size: 14px;
   @include font-inter-400;
   max-width: 1920px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .container {

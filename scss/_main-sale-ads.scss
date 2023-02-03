@@ -91,3 +91,17 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .main_sale_ads {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &__item {
+      min-width: 290px;
+    }
+  }
+}

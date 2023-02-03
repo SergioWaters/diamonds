@@ -1,4 +1,5 @@
 .main_daily {
+  display: none;
 
   & h1 {
     @include font-prata-400;

@@ -85,6 +85,20 @@ $(document).ready(function () {
     pauseOnFocus: false,
     pauseOnHover: false,
     slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 950,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 680,
+        settings: { slidesToShow: 1 }
+      },
+    ]
   });
   // 
   $('.main_daily__slider').slick({
@@ -97,7 +111,7 @@ $(document).ready(function () {
     infinite: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    slidesToShow: 1,
+    draggable: false,
   });
 
   $('.first.main_daily__item-slider').slick({

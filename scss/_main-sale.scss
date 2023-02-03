@@ -22,6 +22,7 @@
   &__categories {
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 
     & .button-rounded {
       margin: 0 8px 0 0;
@@ -55,11 +56,19 @@
 
     .slick-list {
       overflow: hidden;
+      flex: 0 1 auto;
+
     }
 
     .slick-track {
       display: flex;
+      flex: 0 1 auto;
+
     }
 
+    &-slide {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

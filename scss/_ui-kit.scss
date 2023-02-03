@@ -1,51 +1,4 @@
-.button-dark {
-  display: block;
-  min-height: 57px;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  background-color: #303030;
-  color: #ffffff;
-  text-transform: uppercase;
-  border: 1px solid #303030;
-
-  &:hover {
-    background-color: #505050;
-    color: #ffffff;
-    border: 1px solid #505050;
-  }
-
-  &:active {
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #000000;
-  }
-}
-
-.button-light {
-  display: block;
-  min-height: 57px;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  color: #303030;
-  border: 1px solid #303030;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: #303030;
-    border: 1px solid #303030;
-    color: #ffffff;
-  }
-
-  &:active {
-    background-color: #000000;
-    border: 1px solid #000000;
-    color: #ffffff;
-  }
-}
-
-// 
-
+// Round buttons with arrow
 .button-circle-right,
 .button-circle-left {
   box-sizing: border-box;
@@ -135,8 +88,56 @@
   }
 }
 
-// 
+// Usual long square buttons
+.button-dark {
+  display: block;
+  min-height: 57px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background-color: #303030;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: 1px solid #303030;
 
+  &:hover {
+    background-color: #505050;
+    color: #ffffff;
+    border: 1px solid #505050;
+  }
+
+  &:active {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+}
+
+.button-light {
+  display: block;
+  min-height: 57px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #303030;
+  border: 1px solid #303030;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+  }
+}
+
+
+
+// Long button rounded
 .button-rounded {
   display: block;
   box-sizing: border-box;
@@ -159,6 +160,7 @@
   }
 }
 
+// Small square button
 .button-square {
   display: block;
   box-sizing: border-box;
@@ -178,6 +180,7 @@
   }
 }
 
+// Navigation link button
 .nav_menu-link {
   display: block;
   box-sizing: border-box;
@@ -232,6 +235,7 @@
   justify-content: center;
 }
 
+// Infobox
 .info {
   position: relative;
   display: inline-block;
@@ -281,28 +285,14 @@
 
 .hidden {
   display: none;
-  transform: scaleY(0);
-  transition: 0.3s;
 }
 
 
-
-@keyframes growDown {
-  0% {
-    transform: scaleY(0)
-  }
-
-  80% {
-    transform: scaleY(1.1)
-  }
-
-  100% {
-    transform: scaleY(1)
-  }
-}
-
+// Dropdown
 
 .dropdown {
+  @include font-inter-400;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -316,7 +306,7 @@
   &-list {
     background-color: #fff;
     box-shadow: 0 8px 20px 0 #0000001A;
-    padding: 0;
+    padding: 15px 0;
     margin: 0;
     position: absolute;
     top: 100%;
@@ -327,11 +317,13 @@
     transform-origin: top center;
 
     &-item {
+      display: flex;
+      align-items: center;
       box-sizing: border-box;
-      padding: 10px 25px;
       list-style-type: none;
       height: 32px;
       background-color: #fff;
+      padding: 5px 24px;
 
       & i {
         display: inline-block;

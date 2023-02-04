@@ -1,5 +1,4 @@
 .main_daily {
-  display: none;
 
   & h1 {
     @include font-prata-400;
@@ -19,8 +18,13 @@
   &__slider {
     min-width: 0px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    // justify-content: space-between;
+    // align-items: center;
+    &-slide {
+      display: flex;
+      justify-content: center;
+    }
 
     &_buttons {
       display: flex;
@@ -47,6 +51,7 @@
     display: flex;
     justify-content: start;
     position: relative;
+    padding: 0 2px;
 
     & .card_promos {
       position: absolute;
@@ -59,10 +64,12 @@
     //local slider
     &-slider {
       min-width: 0px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 550px;
+      max-width: 550px;
+
+      & img {
+        // display: block;
+        width: 550px;
+      }
 
       & .slick-list {
         overflow: hidden;
@@ -361,10 +368,7 @@
             height: 20px;
             margin-right: 8px;
           }
-
-
         }
-
       }
     }
 
@@ -377,6 +381,141 @@
     .button-light {
       width: 400px;
       height: 52px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_daily {
+    &__item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-slider_wrapper {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .main_daily {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      &-slider_wrapper {
+        & .slick-slide {
+          display: flex;
+          justify-content: center;
+        }
+
+        & .arrow__right {
+          display: none;
+        }
+
+        & .arrow__left {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 601px) {
+  .main_daily {
+    &__item {
+
+      &-slider {
+        max-width: 360px;
+
+        & img {
+          width: 350px;
+        }
+      }
+    }
+
+    &__item_info {
+      margin: 10px;
+
+      & .heading {
+        font-size: 22px;
+        line-height: 22px;
+      }
+
+      & .price-time {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        & .card_price {
+          margin: 30px 0;
+        }
+      }
+
+
+      & .color {
+        margin: 30px 0 0 0;
+
+        &_box {
+          display: flex;
+          margin: 16px 0 0 0;
+        }
+      }
+
+      & .size {
+
+        &_list {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 16px 0px 0 0px;
+
+          .button-square {
+            margin: 4px 4px;
+          }
+        }
+      }
+
+      .buy {
+        margin: 40px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_buttons {
+          margin: 0 0 0 0;
+        }
+
+        &_icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 30px 0 0 0;
+          font-size: 8px;
+
+          &__icon {
+            padding: 10px;
+            color: #c9c9c9;
+          }
+
+          & p {
+            display: none;
+          }
+        }
+      }
+
+      .button-dark {
+        width: 300px;
+
+      }
+
+      .button-light {
+        width: 300px;
+      }
     }
   }
 }

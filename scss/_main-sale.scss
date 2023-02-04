@@ -2,7 +2,7 @@
 
   & h1 {
     @include font-prata-400;
-    margin: 0;
+    // margin: 0;
     font-size: 40px;
     line-height: 40px;
   }
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
 
     & .button-rounded {
-      margin: 0 8px 0 0;
+      margin: 4px;
     }
   }
 
@@ -33,9 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 0px -10px;
     min-width: 0;
-    min-height: 620px;
 
     &_buttons {
       display: flex;
@@ -50,25 +48,22 @@
       }
     }
 
+    &-slide {
+      margin: 0 auto;
+    }
+
     & .card {
-      margin: 10px 10px 120px 10px;
+      max-width: 310px;
     }
 
     .slick-list {
       overflow: hidden;
-      flex: 0 1 auto;
-
+      min-height: 650px;
     }
 
     .slick-track {
       display: flex;
-      flex: 0 1 auto;
-
     }
 
-    &-slide {
-      display: flex;
-      justify-content: center;
-    }
   }
 }

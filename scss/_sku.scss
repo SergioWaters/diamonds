@@ -6,7 +6,7 @@
   color: #303030;
   background-color: #fff;
   border: 1px solid #f0f0f0;
-  width: 310px;
+  min-width: 310px;
   position: relative;
   transition: 0.5s;
 
@@ -184,5 +184,16 @@
   &:hover {
     box-shadow: 0 16px 32px #0000001A;
     transition: 0.5s;
+  }
+}
+
+@media (max-width: 770px) {
+  .card {
+    box-shadow: 0 16px 32px #0000001A;
+  }
+
+  .card .dropdown {
+    display: flex;
+
   }
 }

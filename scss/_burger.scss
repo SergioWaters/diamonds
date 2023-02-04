@@ -57,7 +57,6 @@ $barcolor: #303030;
   width: 100%;
   height: $barheight;
   background-color: $barcolor;
-  border-radius: 2px;
 
   &:not(:first-child) {
     margin-top: $barheight;

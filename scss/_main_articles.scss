@@ -34,7 +34,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: -10px;
   }
 
   &__item {
@@ -45,7 +44,6 @@
     text-decoration: none;
     text-align: left;
     color: #303030;
-    margin: 10px;
     max-width: 310px;
 
     & .item__img {
@@ -76,7 +74,10 @@
     &__inner {
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center;
+    }
+
+    &__item {
+      margin: 5px;
     }
   }
 }

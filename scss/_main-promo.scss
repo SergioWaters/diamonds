@@ -1,6 +1,5 @@
 .main_promo {
-  // display: flex;
-  display: none;
+  display: flex;
   justify-content: center;
   position: relative;
   min-width: 0;
@@ -15,29 +14,27 @@
     align-items: flex-start;
     background-image: url(../images/main_slider/diamond_bg.svg),
       url(../images/main_slider/ring_bg.png);
-    background-size: 720px auto, 500px auto;
+    padding: 120px;
     background-repeat: no-repeat;
-    background-position: 0px 0px, 750px 0px;
     background-color: #f8f8f8;
+    background-size: 720px auto, 500px auto;
+    background-position: 0px 0px, 750px 0px;
 
     & h1 {
       @include font-prata-400;
       font-size: 50px;
       line-height: 50px;
       text-transform: uppercase;
-      margin: 0 0 54px 126px;
     }
 
     & h3 {
       @include font-prata-400;
       font-size: 20px;
       line-height: 20px;
-      margin: 0 0 30px 126px;
+      margin: 54px 0 30px 0;
     }
 
-    & button {
-      margin: 0 0 0 126px;
-    }
+    & .button-dark {}
   }
 
   & .button-circle-left {
@@ -100,5 +97,71 @@
       display: flex;
     }
 
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_promo {
+    &__slide {
+      background-position: top left, top right;
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main_promo {
+    &__slide {
+      background-image: url(../images/main_slider/diamond_bg.svg);
+      background-size: 720px auto;
+      background-position: top left;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .main_promo {
+    margin: 0;
+
+    & .button-circle-left,
+    & .button-circle-right {
+      opacity: 0;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &__slide {
+      padding: 60px 30px;
+      height: 300px;
+      background-image: url(../images/main_slider/diamond_bg.svg),
+        url(../images/main_slider/ring_bg.png);
+      background-size: 50% auto, 280px auto;
+      background-repeat: no-repeat;
+      background-position: 13% 50%, 113% 50%;
+
+      & h1 {
+        font-size: 30px;
+      }
+
+      & h3 {
+        font-size: 18px;
+        margin: 10px 0 15px 0;
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width: 530px) {
+  .main_promo {
+
+    &__slide {
+      background-image: url(../images/main_slider/diamond_bg.svg);
+      background-size: 50% auto;
+      background-repeat: no-repeat;
+      background-position: 13% 50%;
+    }
   }
 }

@@ -59,17 +59,18 @@
 
   & .phone {
     position: relative;
-    padding: 10px 0 10px 24px;
+    padding: 10px 0 10px 2px;
     margin-left: 9px;
+    fill: #303030;
+    display: flex;
+    align-items: center;
 
-    &::before {
-      content: '';
-      position: absolute;
-      background: url(../images/icons/phone_filled.svg);
-      fill: #303030;
-      width: 16px;
-      height: 16px;
-      left: 0px;
+    & svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      fill: #30303080;
     }
   }
 

@@ -71,16 +71,22 @@ $(document).ready(function () {
     infinite: true,
     pauseOnFocus: false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: false,
+          prevArrow: null,
+          nextArrow: null,
+        }
+      },
+    ]
   });
   //
   $('.main_sale__slider').slick({
-    dots: false,
-    appendDots: $(),
     arrows: true,
     prevArrow: $('.main_sale .button-circle-left'),
     nextArrow: $('.main_sale .button-circle-right'),
-    autoplay: false,
-    autoplayspeed: 5000,
     infinite: false,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -95,7 +101,7 @@ $(document).ready(function () {
         settings: { slidesToShow: 2 }
       },
       {
-        breakpoint: 680,
+        breakpoint: 770,
         settings: { slidesToShow: 1 }
       },
     ]
@@ -112,6 +118,8 @@ $(document).ready(function () {
     pauseOnFocus: false,
     pauseOnHover: false,
     draggable: false,
+    swipe: false,
+    touchMove: false
   });
 
   $('.first.main_daily__item-slider').slick({
@@ -124,6 +132,16 @@ $(document).ready(function () {
     infinite: false,
     pauseOnFocus: false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: false,
+          prevArrow: $(''),
+          nextArrow: $(''),
+        }
+      },
+    ]
   });
   $('.second.main_daily__item-slider').slick({
     dots: false,
@@ -135,5 +153,15 @@ $(document).ready(function () {
     infinite: false,
     pauseOnFocus: false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: false,
+          prevArrow: $(''),
+          nextArrow: $(''),
+        }
+      },
+    ]
   });
 });

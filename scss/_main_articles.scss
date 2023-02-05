@@ -23,10 +23,22 @@
     color: #303030;
     font-size: 14px;
     text-decoration: none;
+    transition: $transition;
 
     & .button-circle-right__arrow {
       width: 26px;
       margin-left: 12px;
+      transition: $transition;
+    }
+
+    &:hover {
+      color: #30303080;
+      transition: $transition;
+
+      & .button-circle-right__arrow {
+        background-color: #30303080;
+        transition: $transition;
+      }
     }
   }
 
@@ -47,11 +59,11 @@
     max-width: 310px;
 
     & .item__img {
-      transition: 0.5s;
+      transition: $transition;
 
       &:hover {
         box-shadow: 0 16px 32px #0000001A;
-        transition: 0.5s;
+        transition: $transition;
       }
     }
 

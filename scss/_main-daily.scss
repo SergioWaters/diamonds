@@ -350,7 +350,9 @@
         align-items: flex-start;
 
         &__icon {
-          color: #c9c9c9;
+          color: #303030;
+          fill: #c9c9c9;
+          stroke: #c9c9c9;
           margin-bottom: 18px;
           display: flex;
           align-items: center;
@@ -358,15 +360,36 @@
           @include font-inter-300;
           font-size: 14px;
           cursor: pointer;
-
-          &:hover {
-            color: #979797;
-          }
+          transition: $transition;
 
           & svg {
+            fill: inherit;
+            stroke: inherit;
             width: 20px;
             height: 20px;
             margin-right: 8px;
+            transition: $transition;
+          }
+
+          &:hover {
+            color: #979797;
+            stroke: #979797;
+            fill: #979797;
+            transition: $transition;
+
+            & svg {
+              transition: $transition;
+            }
+          }
+
+          &.heart-checked svg {
+            fill: #E24B33;
+            transition: $transition;
+
+            &:hover {
+              fill: #E24B33;
+              transition: $transition;
+            }
           }
         }
       }

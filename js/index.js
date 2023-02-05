@@ -1,8 +1,8 @@
 // get favourites icon
 document
-  .querySelectorAll('.card_icon.heart')
+  .querySelectorAll('.heart')
   .forEach(i => i.addEventListener(
-    'click', (e) => e.target.classList.toggle('card_icon-checked')
+    'click', () => i.classList.toggle('heart-checked')
   ));
 
 //get dropdown

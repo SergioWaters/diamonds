@@ -24,7 +24,7 @@
     background-color: #f8f8f8;
     text-decoration: none;
     color: #303030;
-    transition: 0.5s;
+    transition: $transition;
 
     &_icon {
       display: flex;
@@ -33,7 +33,7 @@
       flex: 5;
 
       & img {
-        transition: 0.5s;
+        transition: $transition;
       }
     }
 
@@ -48,7 +48,7 @@
 
     &:hover &_icon img {
       transform: scale(125%);
-      transition: 0.5s;
+      transition: $transition;
     }
   }
 

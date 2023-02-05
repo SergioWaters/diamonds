@@ -17,11 +17,11 @@
     align-items: flex-start;
     margin: 10px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: $transition;
 
     &:hover {
       box-shadow: 0 16px 32px #0000001A;
-      transition: 0.5s;
+      transition: $transition;
     }
 
     & h3 {

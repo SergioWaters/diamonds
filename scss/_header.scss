@@ -2,10 +2,12 @@
   & a {
     text-decoration: none;
     color: #303030;
+    transition: $transition;
   }
 
   & a:hover {
     color: #30303080;
+    transition: $transition;
   }
 
   &_part {
@@ -25,22 +27,26 @@
     display: flex;
     margin: 0 40px 0 0;
 
-
     &-selected {
       display: flex;
       justify-content: start;
       width: 100%;
       position: relative;
+      fill: #303030;
+      color: #303030;
+      transition: $transition;
+      padding: 10px 0;
 
-      &::before {
-        content: '';
-        position: absolute;
-        background: url(../images/icons/location.svg);
-        fill: #303030;
+      &:hover {
+        color: #30303080;
+        fill: #30303080;
+      }
+
+      & svg {
+        fill: inherit;
         width: 16px;
         height: 16px;
-        top: 9px;
-        left: 2px;
+        margin-right: 8px;
       }
 
       &::after {
@@ -135,11 +141,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: all 0.3s;
+      transition: $transition;
 
 
       &:hover {
-        transition: all 0.3s;
+        transition: $transition;
         background-color: #f8f8f8;
       }
 
@@ -208,6 +214,7 @@
     &-icon {
       fill: #303030;
       margin: 0 12px 0 0;
+      transition: $transition;
     }
 
     &-input {
@@ -218,6 +225,7 @@
 
     &:hover .search-icon {
       fill: #30303080;
+      transition: $transition;
     }
   }
 }
@@ -340,7 +348,7 @@
         position: relative;
 
         &-input {
-          transition: .3s;
+          transition: $transition;
           position: absolute;
           right: 0;
           top: 100%;

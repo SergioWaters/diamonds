@@ -13,9 +13,11 @@
   border: 1px solid #303030;
   z-index: 999;
   background-color: transparent;
+  transition: $transition;
 
   &:hover {
     background-color: #f5f5f5;
+    transition: $transition;
   }
 
   &__arrow {
@@ -24,6 +26,7 @@
     height: 1px;
     width: 16px;
     position: relative;
+    transition: $transition;
   }
 }
 
@@ -54,6 +57,7 @@
 
   &:active &__arrow {
     left: 100%;
+    transition: $transition;
   }
 
 }
@@ -85,6 +89,7 @@
 
   &:active &__arrow {
     right: 100%;
+    transition: $transition;
   }
 }
 
@@ -98,11 +103,13 @@
   color: #ffffff;
   text-transform: uppercase;
   border: 1px solid #303030;
+  transition: $transition;
 
   &:hover {
     background-color: #505050;
     color: #ffffff;
     border: 1px solid #505050;
+    transition: $transition;
   }
 
   &:active {
@@ -121,11 +128,13 @@
   color: #303030;
   border: 1px solid #303030;
   text-transform: uppercase;
+  transition: $transition;
 
   &:hover {
     background-color: #303030;
     border: 1px solid #303030;
     color: #ffffff;
+    transition: $transition;
   }
 
   &:active {
@@ -147,14 +156,21 @@
   min-height: 40px;
   border-radius: 21px;
   border: none;
+  transition: $transition;
 
   &:hover {
     background-color: #dddddd;
     color: #303030;
+    transition: $transition;
   }
 
   &:active,
   &:focus {
+    background-color: #303030;
+    color: #ffffff;
+  }
+
+  &.active {
     background-color: #303030;
     color: #ffffff;
   }
@@ -168,9 +184,11 @@
   background-color: #ffffff;
   color: #303030;
   padding: 10px 12px;
+  transition: $transition;
 
   &:hover {
     border: 1px solid #303030;
+    transition: $transition;
   }
 
   &:active {
@@ -188,9 +206,11 @@
   color: #303030;
   border: none;
   background-color: transparent;
+  transition: $transition;
 
   &:hover {
-    color: #30303080
+    color: #30303080;
+    transition: $transition;
   }
 }
 
@@ -200,25 +220,21 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
-
-  &-checked {
-    fill: #E24B33;
-    stroke: transparent;
-  }
+  transition: $transition;
 
   &:hover {
     fill: #979797;
+    transition: $transition;
   }
 }
 
-.card__open-icon {
-  fill: #c9c9c9;
-  stroke: transparent;
-  color: #303030;
+.heart-checked {
+  fill: #E24B33;
+  transition: $transition;
 
   &:hover {
-    fill: #979797;
-    color: #979797;
+    fill: #E24B33;
+    transition: $transition;
   }
 }
 
@@ -245,6 +261,7 @@
   background-color: #f0f0f0;
   color: #303030;
   text-align: center;
+  transition: $transition;
 
   &_checkbox {
     display: none;
@@ -252,6 +269,7 @@
 
   &:hover {
     background-color: #d3d3d3;
+    transition: $transition;
   }
 
   &_text {
@@ -297,10 +315,11 @@
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: $transition;
 
   &-selected {
     padding: 10px 25px;
+    transition: $transition;
   }
 
   &-list {
@@ -313,7 +332,7 @@
     left: 0;
     z-index: 999;
     width: 100%;
-    animation: growDown 300ms ease-in-out forwards;
+    animation: growDown $transition ease-in-out forwards;
     transform-origin: top center;
 
     &-item {
@@ -338,6 +357,7 @@
 
     &-item:hover {
       background-color: #fafafa;
+      transition: $transition;
     }
   }
 }
